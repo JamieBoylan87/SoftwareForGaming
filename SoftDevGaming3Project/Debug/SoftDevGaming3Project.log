@@ -1,0 +1,9 @@
+﻿  Creature.cpp
+  Inventory.cpp
+C:\Users\dclog\Documents\GitHub\SoftwareForGaming\SoftDevGaming3Project\Inventory.cpp(56,26): warning C4018: '<': signed/unsigned mismatch
+  Player.cpp
+  RogueMap.cpp
+  RoguePlayerMovement.cpp
+  Utility.cpp
+  Generating Code...
+  SoftDevGaming3Project.vcxproj -> C:\Users\dclog\Documents\GitHub\SoftwareForGaming\SoftDevGaming3Project\Debug\SoftDevGaming3Project.exe
