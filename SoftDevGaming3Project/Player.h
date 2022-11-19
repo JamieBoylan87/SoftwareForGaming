@@ -13,11 +13,10 @@ private:
 
 public:
     std::string name;
-    Player(std::string name, int maxHP, int attack);
-    // (b)
+    Player(std::string name, int maxHP, int attackDamage, int attackChance);
     ~Player()
     {
-        std::cout << "\nDestructor called from: " << name << std::endl;
+        std::cout << "\nPlayer " << name << "died " << std::endl;
     }
     void GainXP(int xp);
 };

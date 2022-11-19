@@ -1,9 +1,9 @@
 #include "Creature.h"
 #include "Player.h"
 
-Player::Player(std::string name, int maxHP, int attack) :Creature(name, maxHP, attack, 0)
+Player::Player(std::string name, int maxHP, int attackDamage, int attackChance) :Creature("Player", 100, 20, 45, 0)
 {
-    _level = 0;
+    _level = 1;
 }
 
 void Player::GainXP(int xp) {
@@ -11,7 +11,7 @@ void Player::GainXP(int xp) {
 
     std::cout << "Received " << xp << " experience points\n";
     // level up every 100 xp points
-    if (_xp > 100)
+    if (_xp >= 100)
     {
         levelUp();
         _xp -= 100;
@@ -21,9 +21,9 @@ void Player::GainXP(int xp) {
 
 void Player::levelUp() {
     _level++;
-    _attack += 10;
-
-    _maxHP += 10;
+    _attackDamage += 10;
+    _attackChance += 15;
+    _maxHP += 20;
     _hp = _maxHP;
 
     std::cout << "\nLevel up!\n";

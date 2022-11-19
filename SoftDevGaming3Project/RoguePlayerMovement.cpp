@@ -3,6 +3,11 @@
 #include <string>
 #include "utility.h"
 #include "rogueMap.h"
+#include "Creature.h"
+#include "SmallMonster.h"
+#include "AverageMonster.h"
+#include "BigMonster.h"
+#include "Player.h"
 
 // map size
 #define MAPSIZEX 35
@@ -16,6 +21,11 @@ unsigned int newPlayerPositionY = playerPositionY;
 char playerChar = 64;
 
 RogueMap map;
+Creature creature;
+SmallMonster imp;
+AverageMonster Demon;
+BigMonster Dragon;
+Player player;
 
 void handleInput()
 {

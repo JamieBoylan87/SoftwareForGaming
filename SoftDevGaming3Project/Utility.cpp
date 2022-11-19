@@ -2,7 +2,6 @@
 #include <windows.h>
 
 
-
 void utility::showConsoleCursor(bool showFlag)
 {
 	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);

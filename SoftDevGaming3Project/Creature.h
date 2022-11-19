@@ -7,15 +7,18 @@ class Creature
 protected:
     int _maxHP;
     int _hp;
-    int _attack;
+    int _attackDamage;
+    int _attackChance;
+    int _range;
+    int _rng;
     int _xp;
 
 public:
     std::string name;
-    Creature(std::string name, int maxHP, int attack, int xp);
+    Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp);
     ~Creature()
     {
-        std::cout << "\nDestructor called from: " << name << std::endl;
+       // std::cout << "\nMonster destroyed " << name << std::endl;
     };
 
     int Attack();
