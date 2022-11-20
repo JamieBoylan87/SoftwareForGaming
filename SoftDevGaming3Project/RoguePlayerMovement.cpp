@@ -4,9 +4,9 @@
 #include "utility.h"
 #include "rogueMap.h"
 #include "Creature.h"
-#include "SmallMonster.h"
-#include "AverageMonster.h"
-#include "BigMonster.h"
+#include "Monster.h"
+#include "WeaponBase.h"
+#include "WeaponMelee.h"
 #include "Player.h"
 
 // map size
@@ -22,9 +22,12 @@ char playerChar = 64;
 
 RogueMap map;
 Creature creature;
-SmallMonster imp;
-AverageMonster Demon;
-BigMonster Dragon;
+Monster imp;
+Monster Demon;
+Monster Dragon;
+WeaponMelee Dagger;
+WeaponMelee LightSword;
+WeaponMelee BroadSword;
 Player player;
 
 void handleInput()

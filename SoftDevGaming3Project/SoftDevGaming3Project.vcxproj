@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="AverageMonster.cpp" />
     <ClCompile Include="BigMonster.cpp" />
+    <ClCompile Include="BroadSword.cpp" />
+    <ClCompile Include="Dagger.cpp" />
+    <ClCompile Include="LightSword.cpp" />
     <ClCompile Include="SmallMonster.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -138,12 +141,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AverageMonster.h" />
-    <ClInclude Include="BigMonster.h" />
     <ClInclude Include="Creature.h" />
-    <ClInclude Include="SmallMonster.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RogueMap.h" />
     <ClInclude Include="Utility.h" />
+    <ClInclude Include="WeaponBase.h" />
+    <ClInclude Include="WeaponMelee.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

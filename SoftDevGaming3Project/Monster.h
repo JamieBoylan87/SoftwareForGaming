@@ -4,14 +4,14 @@
 
 #include <iostream>
 
-class SmallMonster : public Creature
+class Monster : public Creature
 {
 private:
 
 public:
     std::string name;
-    SmallMonster(std::string name, int maxHP, int attackDamage, int attackChance, int xp);
-    ~SmallMonster()
+    Monster(std::string name, int maxHP, int attackDamage, int attackChance, int xp);
+    ~Monster()
     {
         std::cout << "\nMonster " << name << " destoyed" << std::endl;
     }

@@ -1,10 +1,10 @@
 #include "Creature.h"
-#include "AverageMonster.h"
+#include "Monster.h"
 
 #include <iostream>
 
 
-AverageMonster::AverageMonster(std::string name, int maxHP, int attackDamage, int attackChance, int xp) :Creature("Demon", 80, 30, 45, 50) {
+Monster::Monster(std::string name, int maxHP, int attackDamage, int attackChance, int xp) :Creature("Demon", 80, 30, 45, 50) {
 
 	_range = 11;
 }
