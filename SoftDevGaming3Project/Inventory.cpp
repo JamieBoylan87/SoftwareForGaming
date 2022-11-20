@@ -38,23 +38,25 @@ class Inventory {
     Item* p_playerItems;       // b) pointer to player items
     int cursedItemChance; // chances of getting a cursed item
 public:
-    Inventory(int n_items); // constructor
+    Inventory(int n_gold, int n_healthPotions); // constructor
     ~Inventory();           // b) destructor
     bool removeItem(Item& item);
+    bool removeGold(Item& gold);
+    bool removeHealthPotion(Item& healthPot);
     bool isEmpty();
 private:
-    void addItem(Item item);
+    void addGold(Item gold);
+    void addHealthPotion(Item healthPot);
     bool calculateCursedItemChance();
 };
 
 // class constructor
-Inventory::Inventory(int n_items = 10) {
+Inventory::Inventory(int n_gold = 100, int n_healhthPotions = 20) {
 
-    cursedItemChance = 0; // start with a 0% chance of finding the cursed item
+    // cursedItemChance = 0; // start with a 0% chance of finding the cursed item
 
     // add 10 random items to the box
-    for (size_t i = 0; i < n_items; i++)
-    {
+    // 
         // create a new item and assign a random name and a random value
 
         /*
@@ -64,34 +66,49 @@ Inventory::Inventory(int n_items = 10) {
 
         // your code
 
-        Item item;
+        Item healthPot;
 
-        item.name = RandomString(i);
+        healthPot.name = "Health Potion";
 
-        item.value = rand() % 51;
+        healthPot.value = rand() % 50 + 1;
 
-        // add a new item to the chest
+        // My Item for game
+
+        Item gold;
+
+        gold.name = "Gold";
+
+        gold.value = 1;
+
+        addGold(gold);
+
+        // add a new item to the game
 
         // your code
 
-        addItem(item);
+        addHealthPotion(healthPot);
 
-    }
+    
 }
 
-// add a new item to Chest
-void Inventory::addItem(Item item) {
-    items.push_back(item);
+// add a new item to Game
+void Inventory::addGold(Item gold) {
+    items.push_back(gold);
 }
 
-// remove item from chest 
+void Inventory::addHealthPotion(Item healthPot) {
+    items.push_back(healthPot);
+}
+
+// remove gold from inventory 
 bool Inventory::removeItem(Item& item) {
     // raise the odds of this being a cursed item
-    if (calculateCursedItemChance()) {
-        return false;
-    }
+    //if (calculateCursedItemChance()) {
+      //  return false;
+    //}
 
     // get a random vector index by using the module operator
+
     int randomIndex = rand() % items.size();
 
 
@@ -127,15 +144,15 @@ bool Inventory::isEmpty() {
     return items.empty();
 }
 
-bool Inventory::calculateCursedItemChance() {
-    int randomIndex = rand() % 100;
-    return randomIndex < cursedItemChance;
-}
+//bool Inventory::calculateCursedItemChance() {
+//    int randomIndex = rand() % 100;
+//    return randomIndex < cursedItemChance;
+//}
 
 void printInventory(std::vector<Item> inv) { // b)
     for (auto i : inv)
     {
-        std::cout << setfill(' ') << setw(40) << i.name << " " << i.value << std::endl;
+        std::cout << i.name << " " << i.value << std::endl;         // setfill(' ') << setw(40) <<
     }
 }
 

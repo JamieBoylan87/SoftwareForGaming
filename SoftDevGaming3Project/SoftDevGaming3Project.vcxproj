@@ -142,8 +142,11 @@
   <ItemGroup>
     <ClInclude Include="AverageMonster.h" />
     <ClInclude Include="Creature.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="RogueMap.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="WeaponBase.h" />
