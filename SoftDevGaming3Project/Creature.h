@@ -15,6 +15,7 @@ protected:
 
 public:
     std::string name;
+    Creature();
     Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp);
     ~Creature()
     {

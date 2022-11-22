@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-class WeaponBase
+class Weapon
 {
 private:
 	//int m_id{};
@@ -12,8 +12,9 @@ protected:
 	int m_durabilty{};
 public:
 	std::string m_name{};
-	WeaponBase(std::string name, int damage, int hitChance, int durability);
-	~WeaponBase() {};
-	virtual int Attack();
+	Weapon();
+	Weapon(std::string name, int damage, int hitChance, int durability);
+	~Weapon() {};
+	int Attack();
 	//std::string getName();
 };

@@ -13,6 +13,7 @@ private:
 
 public:
     std::string name;
+    Player();
     Player(std::string name, int maxHP, int attackDamage, int attackChance);
     ~Player()
     {
