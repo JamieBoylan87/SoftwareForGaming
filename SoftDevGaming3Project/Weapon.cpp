@@ -6,16 +6,6 @@ Weapon::Weapon(std::string name, int damage, int hitChance, int durability) :Wea
 
 }
 
-//Weapon::Weapon(std::string name, int damage, int hitChance, int durability) : Weapon("Dagger", 10, 10, 7)
-//{
-//
-//}
-//
-//Weapon::Weapon(std::string name, int damage, int hitChance, int durability) : Weapon("LightSword", 25, 20, 15)
-//{
-//
-//}
-
 int Weapon::Attack()
 {
     m_durabilty -= 1;

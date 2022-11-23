@@ -74,6 +74,20 @@ void renderUI() {
 
 int main()
 {
+	Player player{ "Player", 100, 40, 40 };
+
+	Creature imp{ "Imp", 20, 15, 20, 35 };
+
+	Creature demon{ "Demon", 70, 45, 40, 75 };
+
+	Creature dragon{ "Dragon", 150, 90, 70, 150 };
+
+	Weapon dagger{ "Dagger", 15, 20, 6 };
+
+	Weapon lightsword{ "Lightsword", 25, 35,  10 };
+
+	Weapon broadsword{ "Broadsword", 50, 50, 30 };
+
 	map.loadMap(MAPSIZEX, MAPSIZEY);
 
 	while (true)

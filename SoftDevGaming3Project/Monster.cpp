@@ -3,20 +3,10 @@
 #include <iostream>
 
 
-Creature::Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp) :Creature("imp", 20, 10, 20, 35) {
-
+Creature::Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp) :Creature("imp", 20, 10, 20, 35) 
+{
 	_range = 5;
 }
-
-//Creature::Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp):Creature("Demon", 50, 35, 45, 70) {
-//
-//	_range = 11;
-//}
-//
-//Creature::Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp) :Creature("Dragon", 150, 65, 70, 200) {
-//
-//	_range = 20;
-//}
 
 void Creature::TakeDamage(int attackDamage)
 {
