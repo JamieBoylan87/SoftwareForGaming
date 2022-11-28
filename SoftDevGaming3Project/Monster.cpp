@@ -2,10 +2,8 @@
 
 #include <iostream>
 
+Creature::Creature() {
 
-Creature::Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp) :Creature("imp", 20, 10, 20, 35) 
-{
-	_range = 5;
 }
 
 void Creature::TakeDamage(int attackDamage)

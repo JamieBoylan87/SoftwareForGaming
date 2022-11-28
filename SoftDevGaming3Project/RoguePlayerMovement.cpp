@@ -19,9 +19,9 @@ unsigned int newPlayerPositionY = playerPositionY;
 char playerChar = 64;
 
 RogueMap map;
-Creature creature;
-Weapon weapon;
-Player player;
+//Creature creature;
+//Weapon weapon;
+//Player player;
 
 void handleInput()
 {
@@ -31,6 +31,7 @@ void handleInput()
 	if (GetKeyState(0x57) & 0x8000)
 	{
 		newPlayerPositionY = playerPositionY - 1;
+		// call movePlayer(int dirx, int diry);
 	}
 
 	if (GetKeyState(0x53) & 0x8000)
@@ -74,19 +75,19 @@ void renderUI() {
 
 int main()
 {
-	Player player{ "Player", 100, 40, 40 };
+	//Player player{ "Player", 100, 40, 40 };
 
-	Creature imp{ "Imp", 20, 15, 20, 35 };
+	//Creature imp{ "Imp", 20, 15, 20, 35 };
 
-	Creature demon{ "Demon", 70, 45, 40, 75 };
+	//Creature demon{ "Demon", 70, 45, 40, 75 };
 
-	Creature dragon{ "Dragon", 150, 90, 70, 150 };
+	//Creature dragon{ "Dragon", 150, 90, 70, 150 };
 
-	Weapon dagger{ "Dagger", 15, 20, 6 };
+	//Weapon dagger{ "Dagger", 15, 20, 6 };
 
-	Weapon lightsword{ "Lightsword", 25, 35,  10 };
+	//Weapon lightsword{ "Lightsword", 25, 35,  10 };
 
-	Weapon broadsword{ "Broadsword", 50, 50, 30 };
+	//Weapon broadsword{ "Broadsword", 50, 50, 30 };
 
 	map.loadMap(MAPSIZEX, MAPSIZEY);
 

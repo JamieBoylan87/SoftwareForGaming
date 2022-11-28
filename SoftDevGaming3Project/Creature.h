@@ -16,7 +16,7 @@ protected:
 public:
     std::string name;
     Creature();
-    Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp);
+    Creature(std::string name, int maxHP, int attackDamage, int attackChance, int xp) {};
     ~Creature()
     {
        // std::cout << "\nMonster destroyed " << name << std::endl;

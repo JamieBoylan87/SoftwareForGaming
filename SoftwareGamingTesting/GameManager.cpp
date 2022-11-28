@@ -1,71 +1,34 @@
 #include "GameManager.h"
 #include <windows.h>
+#include <iostream>
+#include <conio.h>
 
 GameManager::GameManager(string fileName)
 {
-	player.initialise(1, 100, 0);
+	player.initialise(1, 1, 100, 0, 11, 1);
 	map.loadMap(fileName, player);
+	map.printMap();
+	system("PAUSE");
 }
 
 void GameManager::startGame()
 {
 	bool isDone = false;
 
-	while(isDone != true)
+	while (isDone != true)
 	{
 		map.printMap();
-		handleInput
+		handleInput();
+		map.moveCreatures(player);
 	}
 }
 
 void GameManager::handleInput()
 {
+	char input;
+	printf("\nPlayer stats | Health : %i | Shield : %i | Damage : %i | Level : %i | Experience : %i\n", player.getHealth(), player.getShield(), player.getAttack(), player.getLevel(), player.getExperience());
+	input = _getch();
+	Sleep(80);
 
-	if ( GetKeyState(VK_UP) & 0x8000)
-	{
-		if (map.checkXY(newPlayerPositionX, newPlayerPositionY - 1))
-		{
-			newPlayerPositionY = playerPositionY - 1;
-		}
-		else
-		{
-			newPlayerPositionY = playerPositionY;
-		}
-	}
-
-	if (GetKeyState(VK_DOWN) & 0x8000)
-	{
-		if (map.checkXY(newPlayerPositionX, newPlayerPositionY + 1))
-		{
-			newPlayerPositionY = playerPositionY + 1;
-		}
-		else
-		{
-			newPlayerPositionY = playerPositionY;
-		}
-	}
-
-	if (GetKeyState(VK_RIGHT) & 0x8000)
-	{
-		if (map.checkXY(newPlayerPositionX + 1, newPlayerPositionY))
-		{
-			newPlayerPositionX = playerPositionX + 1;
-		}
-		else
-		{
-			newPlayerPositionX = playerPositionX;
-		}
-	}
-
-	if (GetKeyState(VK_LEFT) & 0x8000)
-	{
-		if (map.checkXY(newPlayerPositionX - 1, newPlayerPositionY))
-		{
-			newPlayerPositionX = playerPositionX - 1;
-		}
-		else
-		{
-			newPlayerPositionX = playerPositionX;
-		}
-	}
+	map.tryMovePlayer(input, player);
 }

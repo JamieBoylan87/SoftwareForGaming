@@ -9,6 +9,4 @@ int main()
 	GameManager gameManager("Map1.txt");
 
 	gameManager.startGame();
-
-	return 0;
 }

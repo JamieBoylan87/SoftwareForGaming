@@ -36,6 +36,11 @@ void RogueMap::loadMap(int width, int height)
 		}
 	}
 
+	// add creatures
+		// initialise creature
+		// setXY()
+		// add new creature to vector
+
 	printMap();
 }
 

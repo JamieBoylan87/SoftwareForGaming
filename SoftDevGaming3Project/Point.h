@@ -30,3 +30,5 @@ int Point::getY()
 {
 	return y;
 }
+
+// overload yhe ==
